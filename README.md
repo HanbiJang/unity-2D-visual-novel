@@ -1,3 +1,5 @@
+플레이 영상 : https://youtu.be/wnMKjhCofMY
+
 ## 📋 프로젝트 정보
 
 | 항목 | 내용 |
