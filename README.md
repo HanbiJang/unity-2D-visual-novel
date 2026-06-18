@@ -36,31 +36,31 @@
 
 ## 코드 상세
 
-코드 파일은 레포에 포함되어 있지 않아 파일 링크 대신 클래스별 역할로 정리합니다.
+일부 코드 파일은 레포에 포함되어 있지 않아 해당 클래스는 링크 없이 역할만 정리합니다.
 
 ### 게임 로직 핵심 (`GameControl/`)
 
 | 클래스 | 역할 |
 |---|---|
-| `GameManager` | 게임 전체 진행 총괄. XML 스크립트 파싱 엔진 핵심. `IdCheck`, `TgCheck`, `RandCheck`, `CondCheck`, `EvCheck` 메서드로 ID/태그/조건/이벤트를 단계별 처리. `SetTg0~5`로 런타임 태그 변수 관리 |
-| `StatusManager` | 플레이어 상태 수치 관리. 멘탈 게이지 등 스탯 추적 |
-| `GameButtonControl` | 게임 패널 on/off 및 UI 버튼 입력 처리 |
-| `ScrollViewManager` | 텍스트 스크롤 뷰 관리. XML 스크립트 파싱(`xmlScriptParsing`) 및 콘텐츠 동적 생성 |
-| `IllustManager` | 인게임 일러스트 표시 및 전환 처리 |
-| `LevelChanger` | 씬 전환 시 페이드 인/아웃 연출. `FadeInStart`, `FadeToLevel`, `OnFadeComplete`를 Coroutine으로 처리 |
-| `SettingManager` | BGM/효과음 볼륨, 텍스트 속도 등 설정 관리. `SoundManager`와 실시간 연동 |
-| `MentalGaugeGra` | 멘탈 게이지 UI 그래픽 처리 |
-| `OneChoicePanel` ~ `FiveChoicePanel` | 선택지 수(1~5개)별 전용 패널 클래스. 각 선택지에 따른 분기 처리 |
+| [`GameManager`](Assets/GameControl/GameManager.cs) | 게임 전체 진행 총괄. XML 스크립트 파싱 엔진 핵심. `IdCheck`, `TgCheck`, `RandCheck`, `CondCheck`, `EvCheck` 메서드로 ID/태그/조건/이벤트를 단계별 처리. `SetTg0~5`로 런타임 태그 변수 관리 |
+| [`StatusManager`](Assets/GameControl/StatusManager.cs) | 플레이어 상태 수치 관리. 멘탈 게이지 등 스탯 추적 |
+| [`GameButtonControl`](Assets/GameControl/GameButtonControl.cs) | 게임 패널 on/off 및 UI 버튼 입력 처리 |
+| [`ScrollViewManager`](Assets/GameControl/ScrollViewManager.cs) | 텍스트 스크롤 뷰 관리. XML 스크립트 파싱(`xmlScriptParsing`) 및 콘텐츠 동적 생성 |
+| [`IllustManager`](Assets/GameControl/IllustManager.cs) | 인게임 일러스트 표시 및 전환 처리 |
+| [`LevelChanger`](Assets/GameControl/LevelChanger.cs) | 씬 전환 시 페이드 인/아웃 연출. `FadeInStart`, `FadeToLevel`, `OnFadeComplete`를 Coroutine으로 처리 |
+| [`SettingManager`](Assets/GameControl/SettingManager.cs) | BGM/효과음 볼륨, 텍스트 속도 등 설정 관리. `SoundManager`와 실시간 연동 |
+| [`MentalGaugeGra`](Assets/GameControl/MentalGaugeGra.cs) | 멘탈 게이지 UI 그래픽 처리 |
+| [`OneChoicePanel`](Assets/GameControl/OneChoicePanel.cs) ~ [`FiveChoicePanel`](Assets/GameControl/FiveChoicePanel.cs) | 선택지 수(1~5개)별 전용 패널 클래스. 각 선택지에 따른 분기 처리 |
 | `TouchSystem` | 인게임 터치 입력 처리 |
 
 ### 업적 시스템 (`Achievement/`)
 
 | 클래스 | 역할 |
 |---|---|
-| `AchievementManager` | Observer 패턴 기반 업적 시스템. `OnNotify`로 게임 이벤트 수신, `CompareCond`로 달성 조건 판별 |
-| `AchievementXmlManager` | 업적 데이터 XML 영속화. `CreateAchieveXml`(최초 생성), `xmlScriptParsing`(파싱), `xmlScriptSave`(달성 시 저장), `LoadAchieveXml`(로드) |
-| `AchievementData` | 업적 데이터 구조체 |
-| `AchievementSetting` | 업적 UI 설정 및 표시 처리 |
+| [`AchievementManager`](Assets/Achievement/AchievementManager.cs) | Observer 패턴 기반 업적 시스템. `OnNotify`로 게임 이벤트 수신, `CompareCond`로 달성 조건 판별 |
+| [`AchievementXmlManager`](Assets/Achievement/AchievementXmlManager.cs) | 업적 데이터 XML 영속화. `CreateAchieveXml`(최초 생성), `xmlScriptParsing`(파싱), `xmlScriptSave`(달성 시 저장), `LoadAchieveXml`(로드) |
+| [`AchievementData`](Assets/Achievement/AchievementData.cs) | 업적 데이터 구조체 |
+| [`AchievementSetting`](Assets/Achievement/AchievementSetting.cs) | 업적 UI 설정 및 표시 처리 |
 
 ### 데이터 / 세이브 (`Data/`)
 
@@ -77,20 +77,20 @@
 
 | 클래스 | 역할 |
 |---|---|
-| `GalleryManager` | 일러스트 갤러리 관리. 클리어 조건에 따른 잠금 해제 처리. `ShowGalleryIllusts`로 해금 여부에 따라 이미지 동적 표시 |
-| `GalleryData` | 갤러리 일러스트 데이터 및 해금 상태 JSON 영속화 |
-| `GalleryUI` | 갤러리 패널 UI. 이미지 확대(줌) 기능(`ZoomPanelOpen`) 포함 |
+| [`GalleryManager`](Assets/gallery/GalleryManager.cs) | 일러스트 갤러리 관리. 클리어 조건에 따른 잠금 해제 처리. `ShowGalleryIllusts`로 해금 여부에 따라 이미지 동적 표시 |
+| [`GalleryData`](Assets/gallery/GalleryData.cs) | 갤러리 일러스트 데이터 및 해금 상태 JSON 영속화 |
+| [`GalleryUI`](Assets/GalleryUI.cs) | 갤러리 패널 UI. 이미지 확대(줌) 기능(`ZoomPanelOpen`) 포함 |
 
 ### 씬/UI 시스템
 
 | 클래스 | 역할 |
 |---|---|
-| `EndingRoll` | 엔딩 태그(`ending`, `TrueEnding`) 감지 시 스태프롤 연출 및 갤러리 자동 해금 |
-| `SoundManager` | `DontDestroyOnLoad` Singleton BGM/SFX 관리. 다중 AudioSource 풀로 효과음 동시 재생. `BGMFadeOut` Coroutine(`Mathf.Lerp`) 기반 자연스러운 볼륨 감소 |
-| `LoadSceneManager` | 씬 이름/인덱스 오버로딩으로 씬 전환 로직 일원화 |
-| `LobbySceneManager` | 로비 씬 진입 처리 |
-| `TextEffect` | 타이핑 애니메이션. 문자 한 글자씩 순차 출력, `StopAllCoroutines`로 즉시 스킵 지원 |
-| `ScreenTouchManager` | 모바일 터치 이벤트 처리. `FindTouchedObject`로 터치된 UI 오브젝트 탐지 |
+| [`EndingRoll`](Assets/EndingRoll.cs) | 엔딩 태그(`ending`, `TrueEnding`) 감지 시 스태프롤 연출 및 갤러리 자동 해금 |
+| [`SoundManager`](Assets/SoundManager.cs) | `DontDestroyOnLoad` Singleton BGM/SFX 관리. 다중 AudioSource 풀로 효과음 동시 재생. `BGMFadeOut` Coroutine(`Mathf.Lerp`) 기반 자연스러운 볼륨 감소 |
+| [`LoadSceneManager`](Assets/LoadSceneManager.cs) | 씬 이름/인덱스 오버로딩으로 씬 전환 로직 일원화 |
+| [`LobbySceneManager`](Assets/LobbySceneManager.cs) | 로비 씬 진입 처리 |
+| [`TextEffect`](Assets/TextEffect/TextEffect.cs) | 타이핑 애니메이션. 문자 한 글자씩 순차 출력, `StopAllCoroutines`로 즉시 스킵 지원 |
+| [`ScreenTouchManager`](Assets/ScreenTouchManager.cs) | 모바일 터치 이벤트 처리. `FindTouchedObject`로 터치된 UI 오브젝트 탐지 |
 | [`ZoomPanelManager`](Assets/ZoomPanelManager.cs) | 일러스트 핀치 줌 기능(`ZoomPanelOpen/Close`) |
 | [`Mode2ContentControl`](Assets/Mode2ContentControl.cs) | 드래그 스크롤과 터치 충돌을 해결한 이미지 뷰 모드 제어 |
 | [`TouchParticle`](Assets/TouchParticle.cs) | 터치 위치 파티클 이펙트 생성 |
