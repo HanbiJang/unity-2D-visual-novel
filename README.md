@@ -128,11 +128,19 @@
 
 > 팀원 저작권 문제로 코드 파일은 레포에 포함되어 있지 않습니다.
 
-- `Scripts/GameControl/` : 게임 로직 핵심 (GameManager, 선택지 패널, 씬 전환 등)
-- `Scripts/Achievement/` : Observer 패턴 업적 시스템, XML 영속화
-- `Scripts/Data/` : JSON 직렬화 세이브/로드, 슬롯 관리
-- `Scripts/gallery/` : 일러스트 갤러리, 잠금 해제 시스템
-- `Scripts/MobileTalk/` : 모바일 메신저 UI 연출
-- `Scripts/TextEffect/` : 타이핑 애니메이션
-- `Scripts/DialogueScripts/` : 대화 흐름 관리
-- `Scripts/Anim2Frame/` : 경량 2프레임 스프라이트 애니메이션
+- `Assets/GameControl/` : 게임 로직 핵심 (GameManager, 선택지 패널, 씬 전환 등)
+- `Assets/Achievement/` : Observer 패턴 업적 시스템, XML 영속화
+- `Assets/gallery/` : 일러스트 갤러리, 잠금 해제 시스템
+- `Assets/TextEffect/` : 타이핑 애니메이션
+- `Assets/DialogueScripts/` : 대화 흐름 관리
+- `Assets/Anim2Frame/` : 경량 2프레임 스프라이트 애니메이션
+- `Assets/EndingRoll.cs` : 엔딩 연출 및 갤러리 자동 해금
+- `Assets/GalleryUI.cs` : 갤러리 패널 UI, 핀치 줌
+- `Assets/LoadSceneManager.cs` : 씬 전환 로직 일원화
+- `Assets/LobbySceneManager.cs` : 로비 씬 진입 처리
+- `Assets/LogoSceneManager.cs` : 로고 씬 처리
+- `Assets/Mode2ContentControl.cs` : 드래그/터치 충돌 해결 이미지 뷰 모드 제어
+- `Assets/ScreenTouchManager.cs` : 모바일 터치 이벤트 처리
+- `Assets/SoundManager.cs` : Singleton BGM/SFX 관리
+- `Assets/TouchParticle.cs` : 터치 위치 파티클 이펙트
+- `Assets/ZoomPanelManager.cs` : 일러스트 핀치 줌
