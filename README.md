@@ -91,12 +91,12 @@
 | `LobbySceneManager` | 로비 씬 진입 처리 |
 | `TextEffect` | 타이핑 애니메이션. 문자 한 글자씩 순차 출력, `StopAllCoroutines`로 즉시 스킵 지원 |
 | `ScreenTouchManager` | 모바일 터치 이벤트 처리. `FindTouchedObject`로 터치된 UI 오브젝트 탐지 |
-| `ZoomPanelManager` | 일러스트 핀치 줌 기능(`ZoomPanelOpen/Close`) |
-| `Mode2ContentControl` | 드래그 스크롤과 터치 충돌을 해결한 이미지 뷰 모드 제어 |
-| `TouchParticle` | 터치 위치 파티클 이펙트 생성 |
+| [`ZoomPanelManager`](Assets/ZoomPanelManager.cs) | 일러스트 핀치 줌 기능(`ZoomPanelOpen/Close`) |
+| [`Mode2ContentControl`](Assets/Mode2ContentControl.cs) | 드래그 스크롤과 터치 충돌을 해결한 이미지 뷰 모드 제어 |
+| [`TouchParticle`](Assets/TouchParticle.cs) | 터치 위치 파티클 이펙트 생성 |
 | `MobileTalkManager` | 모바일 메신저 UI 연출 |
-| `Anim2Frame` | 2프레임 이미지 교체 경량 애니메이션. 추가 Animator 없이 캐릭터 표정 변화 구현 |
-| `DialogueManager` | 대화 흐름 관리. `Queue<string>`으로 대사 순서 관리, `TypeSentence` Coroutine으로 타이핑 출력 |
+| [`Anim2Frame`](Assets/Anim2Frame/Anim2Frame.cs) | 2프레임 이미지 교체 경량 애니메이션. 추가 Animator 없이 캐릭터 표정 변화 구현 |
+| [`DialogueManager`](Assets/DialogueScripts/DialogueManager.cs) | 대화 흐름 관리. `Queue<string>`으로 대사 순서 관리, `TypeSentence` Coroutine으로 타이핑 출력 |
 
 ---
 
